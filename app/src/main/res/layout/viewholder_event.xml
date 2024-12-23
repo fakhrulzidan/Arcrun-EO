@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_marginVertical="8dp">
+
+    <!-- Gambar Latar Belakang -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/gambarBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/bg_gambar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Status Event -->
+        <TextView
+            android:id="@+id/statusEventTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12sp"
+            android:text="Penuh"
+            android:textColor="@color/redTxt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Update Event -->
+        <TextView
+            android:id="@+id/updateEventTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12sp"
+            android:text="Update"
+            android:textColor="@color/redTxt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Delete Event -->
+        <TextView
+            android:id="@+id/deleteEventTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12sp"
+            android:text="Delete"
+            android:textColor="@color/redTxt"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/updateEventTxt"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Informasi Event -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_card_polos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Nama Event -->
+            <TextView
+                android:id="@+id/namaEventTxt"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:text="Jogja Virtual Running 2024"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Deadline Pendaftaran -->
+            <TextView
+                android:id="@+id/dlTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Batas Akhir Pendaftaran"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/namaEventTxt" />
+
+            <!-- Harga -->
+            <TextView
+                android:id="@+id/hargaTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="12.000/Org"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/namaEventTxt" />
+
+            <!-- Tanggal Akhir -->
+            <TextView
+                android:id="@+id/batasAkhirTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13/11/2024"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/dlTxt"
+                app:layout_constraintStart_toStartOf="@+id/hargaTxt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/blurOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DC000000"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

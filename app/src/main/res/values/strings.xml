@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Arcrun For EO</string>
+    <string-array name="categories">
+        <item>Lari 5K</item>
+        <item>Lari 10K</item>
+        <item>Maraton</item>
+    </string-array>
+    <string name="map_api">AIzaSyCaORRh4m1Yd8IHRt-Unvhi0QxwncVWcSU</string>
+</resources>

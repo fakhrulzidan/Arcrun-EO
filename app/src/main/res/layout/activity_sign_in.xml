@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Activity.SignInActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arcrun" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/bg_card_login"
+        android:backgroundTint="@color/whiteSmoke"
+        app:blurOverlayColor="#90000000"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/greyIcon"
+            app:hintTextColor="@color/greyIcon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Masukan Email"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/emailEror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/redTxt"
+            android:text="TextView"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:paddingStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/greyIcon"
+            app:hintTextColor="@color/greyIcon"
+            app:passwordToggleEnabled="true"
+            app:endIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Password"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                tools:ignore="HardcodedText" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/etPassword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_marginHorizontal="24dp"-->
+<!--            android:background="@drawable/bg_card_login"-->
+<!--            android:textSize="20sp"-->
+<!--            android:paddingStart="24dp"-->
+<!--            android:textColorHint="@color/greyIcon"-->
+<!--            android:hint="Masukan Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            app:boxStrokeColor="@color/whiteSmoke"-->
+<!--            app:hintTextColor="@color/whiteSmoke"-->
+<!--            app:passwordToggleEnabled="true"/>-->
+
+        <TextView
+            android:id="@+id/passEror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:paddingStart="16dp"
+            android:textColor="@color/redTxt"
+            android:text="TextView"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="42dp"
+            android:layout_marginVertical="42dp"
+            android:background="@drawable/bg_orange_button"
+            android:text="Sign In"
+            android:textColor="@color/whiteSmoke"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
